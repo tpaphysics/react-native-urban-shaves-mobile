@@ -1,11 +1,10 @@
-import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
-import { Text, TextInput, View } from 'react-native';
+import { Image, View } from 'react-native';
 
-import { colors, fonts } from '../../theme';
+import logo from '../assets/logo-t.png';
+import AvatarsInto from '../components/AvatarsInto';
 import Button from '../components/Button';
 import Input from '../components/Input';
-import Title from '../components/Typography/Title';
 
 function Login() {
   return (
@@ -15,8 +14,8 @@ function Login() {
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-      <Title>Be your best version</Title>
-
+      <Image source={logo} style={{ marginBottom: 48 }} />
+      <AvatarsInto mb={24} />
       <Input icon="mail" placeholder="E-mail" mb={8} />
       <Input icon="lock" placeholder="Password" mb={16} />
 

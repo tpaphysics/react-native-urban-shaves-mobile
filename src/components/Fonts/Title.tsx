@@ -17,7 +17,7 @@ function Title({ children }: TextProps) {
       style={{
         color: colors.orangeFont,
         fontFamily: fonts.medium,
-        fontSize: 20,
+        fontSize: 18,
         marginBottom: 24,
       }}>
       {children}
