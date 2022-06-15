@@ -23,9 +23,9 @@ O App mobile <strong>Urban Shaves</strong> foi desenvolvido em [React Native](ht
 #### **Screens**
 
 <p align="center">
-  <img alt="login" src="./assets/Login.jpeg" widht="100px">
-  <img alt="register" src="./assets/Register.jpeg" widht="320px">
-  <img alt="forgot" src="./assets/Forgot.jpeg" widht="320px">
+  <img alt="login" src="./assets/login.png" widht="320px">
+  <img alt="register" src="./assets/register.png" widht="320px">
+  <img alt="forgot" src="./assets/forgot.png" width="320px">
 </p>
 <p align="center">
   <img alt="dashboard1" src="" widht="320px"/>
