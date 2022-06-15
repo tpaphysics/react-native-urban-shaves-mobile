@@ -44,6 +44,7 @@ function Input({ icon, mt, mb, ...props }: InputProps) {
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         style={{
+          borderWidth: 0,
           width: '100%',
           height: 50,
           fontFamily: fonts.regular,

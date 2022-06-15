@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@types/": "react-navigation/native",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.66.13",
     "@typescript-eslint/eslint-plugin": "^5.27.1",

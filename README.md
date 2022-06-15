@@ -13,7 +13,7 @@
 <br/>
 
 <p align="center">
-<img  src="./src/assets/desktop/logo.png"/>
+<img  src="./assets/splash.png"/>
 </p>
 
 ## **💻 Projeto**
@@ -23,14 +23,14 @@ O App mobile <strong>Urban Shaves</strong> foi desenvolvido em [React Native](ht
 #### **Screens**
 
 <p align="center">
-  <img alt="login" src="./src/assets/mobile/login.png" widht="320px">
-  <img alt="register" src="./src/assets/mobile/register.png" widht="320px">
-  <img alt="forgot" src="./src/assets/mobile/forgot.png" widht="320px">
+  <img alt="login" src="./assets/Login.jpeg" widht="320px">
+  <img alt="register" src="./assets/Register.jpeg" widht="320px">
+  <img alt="forgot" src="./assets/Forgot.jpeg" widht="320px">
 </p>
 <p align="center">
-  <img alt="dashboard1" src="./src/assets/mobile/dashboard1.png" widht="320px"/>
-  <img alt="dashboard2" src="./src/assets/mobile/dashboard2.png" widht="320px">
-  <img alt="profile" src="./src/assets/mobile/profile.png" widht="320px">
+  <img alt="dashboard1" src="" widht="320px"/>
+  <img alt="dashboard2" src="" widht="320px">
+  <img alt="profile" src="" widht="320px">
 </p>
 
 ## **🔖 Layout**

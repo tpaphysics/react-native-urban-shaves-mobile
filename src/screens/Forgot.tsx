@@ -3,13 +3,12 @@ import { Image, View } from 'react-native';
 
 import colors from '../../theme/colors';
 import logo from '../assets/logo-t.png';
-import AvatarPersons from '../components/AvatarPersons';
 import Button from '../components/Button';
+import Title from '../components/Fonts/Title';
 import Input from '../components/Input';
-import LinkOne from '../components/LinkOne';
 import LinkTwo from '../components/LinkTwo';
 
-function Login() {
+function Forgot() {
   return (
     <View
       style={{
@@ -20,15 +19,13 @@ function Login() {
         paddingHorizontal: 10,
       }}>
       <Image source={logo} style={{ marginBottom: 48 }} />
-      <AvatarPersons mb={32} />
-      <Input icon="mail" placeholder="E-mail" mb={8} />
-      <Input icon="lock" placeholder="Password" mb={16} />
+      <Title>Recover my password</Title>
+      <Input icon="mail" placeholder="E-mail" mb={16} />
 
-      <Button title="Sigin" />
-      <LinkOne mt={32} title="Forgot your password?" to="Remember" />
-      <LinkTwo icon="log-in" mt={32} title="Create your account" to="Register" />
+      <Button title="Send email" />
+      <LinkTwo icon="arrow-left" mt={32} title="Back to Login" to="Login" />
     </View>
   );
 }
 
-export default Login;
+export default Forgot;
