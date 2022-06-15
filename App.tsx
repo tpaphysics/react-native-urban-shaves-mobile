@@ -1,10 +1,13 @@
-import { useFonts, RobotoSlab_400Regular, __metadata__ } from '@expo-google-fonts/roboto-slab';
+import { useFonts, RobotoSlab_400Regular } from '@expo-google-fonts/roboto-slab';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
 
 import Login from './src/screens/Login';
+import Register from './src/screens/Register';
 import { colors } from './theme';
 
 export default function App() {
@@ -15,6 +18,8 @@ export default function App() {
   if (!fontsLoaded) {
     return <AppLoading />;
   }
+  const Stack = createNativeStackNavigator();
+
   return (
     <View
       style={{
@@ -22,8 +27,13 @@ export default function App() {
         backgroundColor: colors.black.background,
         paddingHorizontal: 10,
       }}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Register" component={Register} />
+        </Stack.Navigator>
+      </NavigationContainer>
       <StatusBar style="auto" />
-      <Login />
     </View>
   );
 }

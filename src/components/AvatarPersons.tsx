@@ -1,15 +1,23 @@
+import { RobotoSlab_500Medium, useFonts } from '@expo-google-fonts/roboto-slab';
+import AppLoading from 'expo-app-loading';
 import React from 'react';
 import { View, Text, Image, ViewProps } from 'react-native';
 
-import { colors } from '../../theme';
-import t1 from '../assets/t1.png';
-import t2 from '../assets/t2.png';
-import t3 from '../assets/t3.png';
+import { colors, fonts } from '../../theme';
+import person1 from '../assets/person1.png';
+import person2 from '../assets/person2.png';
+import person3 from '../assets/person3.png';
 
 interface AvatarsProps extends ViewProps {
   mb: number;
 }
-function AvatarsInto({ mb }: AvatarsProps) {
+export default function AvatarPersons({ mb }: AvatarsProps) {
+  const [fontsLoaded] = useFonts({
+    RobotoSlab_500Medium,
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
   return (
     <View
       style={{
@@ -17,7 +25,14 @@ function AvatarsInto({ mb }: AvatarsProps) {
         justifyContent: 'flex-end',
         marginBottom: mb,
       }}>
-      <Text style={{ marginRight: 'auto', fontSize: 18, color: colors.orange, marginBottom: 14 }}>
+      <Text
+        style={{
+          marginRight: 'auto',
+          fontSize: 18,
+          color: colors.orange,
+          marginBottom: 16,
+          fontFamily: fonts.medium,
+        }}>
         Be your best version
       </Text>
       <View
@@ -40,7 +55,15 @@ function AvatarsInto({ mb }: AvatarsProps) {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Text style={{ color: colors.orange, fontSize: 16, fontWeight: 'bold' }}>You</Text>
+          <Text
+            style={{
+              color: colors.orange,
+              fontSize: 16,
+              fontWeight: 'bold',
+              fontFamily: fonts.medium,
+            }}>
+            You
+          </Text>
         </View>
         <View
           style={{
@@ -55,7 +78,7 @@ function AvatarsInto({ mb }: AvatarsProps) {
           <Text style={{ color: colors.orange, fontSize: 32 }}>+</Text>
         </View>
         <Image
-          source={t3}
+          source={person3}
           style={{
             borderWidth: 2,
             borderColor: colors.orange,
@@ -68,7 +91,7 @@ function AvatarsInto({ mb }: AvatarsProps) {
           }}
         />
         <Image
-          source={t2}
+          source={person2}
           style={{
             borderWidth: 2,
             borderColor: colors.orange,
@@ -81,7 +104,7 @@ function AvatarsInto({ mb }: AvatarsProps) {
           }}
         />
         <Image
-          source={t1}
+          source={person1}
           style={{
             borderWidth: 2,
             borderColor: colors.orange,
@@ -96,5 +119,3 @@ function AvatarsInto({ mb }: AvatarsProps) {
     </View>
   );
 }
-
-export default AvatarsInto;
