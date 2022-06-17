@@ -30,7 +30,7 @@ function Button({ title, ...props }: ButtonProps) {
       <Text
         style={{
           fontFamily: fonts.medium,
-          fontSize: 14,
+          fontSize: 16,
         }}>
         {title}
       </Text>

@@ -1,13 +1,12 @@
 import React from 'react';
-import { Image, View, Text } from 'react-native';
+import { FlatList, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import data from '../../HaidressersList';
 import colors from '../../theme/colors';
-import logo from '../assets/logo-t.png';
-import Button from '../components/Button';
 import Title from '../components/Fonts/Title';
+import HairdressrsCard from '../components/HairdressrsCard';
 import Header from '../components/Header';
-import Input from '../components/Input';
 import LinkTwo from '../components/LinkTwo';
 
 export default function Dashboard() {
@@ -20,7 +19,7 @@ export default function Dashboard() {
         backgroundColor: colors.black.background,
       }}>
       <Header avatar="https://i.pravatar.cc/400?img=13" message="Be welcome" name="Eric Copolla" />
-      <View
+      <ScrollView
         style={{
           width: '100%',
           paddingHorizontal: 24,
@@ -33,12 +32,19 @@ export default function Dashboard() {
           mb={24}>
           Hairdressers
         </Title>
-        <Input icon="mail" placeholder="Name" mb={8} />
-        <Input icon="mail" placeholder="E-mail" mb={8} />
+        <FlatList
+          data={data}
+          keyExtractor={(item) => item.name}
+          renderItem={(data) => {
+            const { avatar, days, name, hours } = data.item;
+            return (
+              <HairdressrsCard avatar={avatar} name={name} hours={hours} days={days} mb={12} />
+            );
+          }}
+        />
 
-        <Button title="Register" />
         <LinkTwo icon="arrow-left" mt={32} title="Back to Login" to="Login" />
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }

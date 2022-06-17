@@ -46,7 +46,7 @@ export default function Header({ name, avatar, message }: HeaderProps) {
             style={{
               color: colors.white,
               fontFamily: 'RobotoSlab_400Regular',
-              fontSize: 20,
+              fontSize: 18,
               lineHeight: 28,
             }}>
             {message}
@@ -67,9 +67,9 @@ export default function Header({ name, avatar, message }: HeaderProps) {
             borderWidth: 2,
             borderColor: colors.orange,
             backgroundColor: colors.black.background,
-            width: 64,
-            height: 64,
-            borderRadius: 64 / 2,
+            width: 72,
+            height: 72,
+            borderRadius: 72 / 2,
           }}
         />
       </View>

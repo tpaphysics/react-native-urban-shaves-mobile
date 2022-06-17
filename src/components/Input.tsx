@@ -49,7 +49,7 @@ function Input({ icon, mt, mb, ...props }: InputProps) {
           height: 50,
           fontFamily: fonts.regular,
           color: colors.orangeFontHard,
-          fontSize: 14,
+          fontSize: 16,
           backgroundColor: colors.black.inputs,
           borderRadius: 10,
           paddingHorizontal: 16,

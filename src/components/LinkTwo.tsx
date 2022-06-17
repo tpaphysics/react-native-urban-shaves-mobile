@@ -27,7 +27,7 @@ function LinkTwo({ title, to, mb, mt, icon }: LinkProps) {
         height: 25,
         marginBottom: mb,
         marginTop: mt,
-        fontSize: 14,
+        fontSize: 16,
         fontFamily: 'RobotoSlab_400Regular',
         color: colors.orange,
         alignItems: 'center',

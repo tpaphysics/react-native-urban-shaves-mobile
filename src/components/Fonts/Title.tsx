@@ -8,7 +8,7 @@ import React from 'react';
 import { Text, TextProps } from 'react-native';
 
 interface TitleProps extends TextProps {
-  size: 12 | 18 | 22;
+  size: 12 | 16 | 18 | 22 | 24;
   color: string;
   fontFamily: 'RobotoSlab_400Regular' | 'RobotoSlab_500Medium';
   mb?: number;
