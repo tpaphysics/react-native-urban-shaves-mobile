@@ -29,7 +29,14 @@ export default function Appointement() {
           showsHorizontalScrollIndicator={false}
           renderItem={({ item, index }) => {
             const { avatar } = item;
-            return <HairdressersSmallCard avatar={avatar} name="Alex Mura.." ml={16} />;
+            return (
+              <HairdressersSmallCard
+                avatar={avatar}
+                name="Alex Mura.."
+                mr={12}
+                ml={index === 0 ? 12 : 0}
+              />
+            );
           }}
         />
       </View>
