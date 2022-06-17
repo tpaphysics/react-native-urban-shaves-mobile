@@ -1,9 +1,10 @@
 import Icon from '@expo/vector-icons/Feather';
-import { Image, View, KeyboardAvoidingView, ScrollView, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { Image, View, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
 
-import { colors } from '../theme';
-import HeaderTwo from './components/HeaderTwo';
-import Input from './components/Input';
+import { colors } from '../../theme';
+import HeaderTwo from '../components/HeaderTwo';
+import Input from '../components/Input';
 
 export default function Profile() {
   return (
@@ -21,7 +22,7 @@ export default function Profile() {
         bg={colors.black.background}
       />
 
-      <View style={{ alignItems: 'center', width: '100%', paddingHorizontal: 12 }}>
+      <View style={{ alignItems: 'center', width: '100%', paddingHorizontal: 24 }}>
         <View style={{ marginBottom: 32 }}>
           <Image
             source={{ uri: 'https://i.pravatar.cc/400?img=13' }}

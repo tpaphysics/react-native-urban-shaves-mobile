@@ -3,11 +3,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 
-import Profile from './src/Profile';
 import Appointement from './src/screens/Appointement';
 import Dashboard from './src/screens/Dasboard';
 import Forgot from './src/screens/Forgot';
 import Login from './src/screens/Login';
+import Profile from './src/screens/Profile';
 import Register from './src/screens/Register';
 
 export default function App() {
