@@ -8,7 +8,7 @@ import Title from '../components/Fonts/Title';
 import Input from '../components/Input';
 import LinkTwo from '../components/LinkTwo';
 
-function Forgot() {
+export default function Forgot() {
   return (
     <View
       style={{
@@ -19,7 +19,9 @@ function Forgot() {
         paddingHorizontal: 10,
       }}>
       <Image source={logo} style={{ marginBottom: 48 }} />
-      <Title>Recover my password</Title>
+      <Title color={colors.orangeFont} fontFamily="RobotoSlab_500Medium" size={18} mb={24}>
+        Recovery my password
+      </Title>
       <Input icon="mail" placeholder="E-mail" mb={16} />
 
       <Button title="Send email" />
@@ -27,5 +29,3 @@ function Forgot() {
     </View>
   );
 }
-
-export default Forgot;

@@ -29,7 +29,7 @@ export default function AvatarPersons({ mb }: AvatarsProps) {
         style={{
           marginRight: 'auto',
           fontSize: 18,
-          color: colors.orange,
+          color: colors.orangeFont,
           marginBottom: 16,
           fontFamily: fonts.medium,
         }}>
@@ -45,7 +45,7 @@ export default function AvatarPersons({ mb }: AvatarsProps) {
         <View
           style={{
             borderWidth: 2,
-            borderColor: colors.orange,
+            borderColor: colors.orangeFont,
             backgroundColor: colors.black.background,
             width: 60,
             height: 60,
@@ -57,7 +57,7 @@ export default function AvatarPersons({ mb }: AvatarsProps) {
           }}>
           <Text
             style={{
-              color: colors.orange,
+              color: colors.orangeFont,
               fontSize: 16,
               fontWeight: 'bold',
               fontFamily: fonts.medium,
@@ -75,13 +75,13 @@ export default function AvatarPersons({ mb }: AvatarsProps) {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Text style={{ color: colors.orange, fontSize: 32 }}>+</Text>
+          <Text style={{ color: colors.orangeFont, fontSize: 32 }}>+</Text>
         </View>
         <Image
           source={person3}
           style={{
             borderWidth: 2,
-            borderColor: colors.orange,
+            borderColor: colors.orangeFont,
             backgroundColor: 'yellow',
             width: 60,
             height: 60,
@@ -94,7 +94,7 @@ export default function AvatarPersons({ mb }: AvatarsProps) {
           source={person2}
           style={{
             borderWidth: 2,
-            borderColor: colors.orange,
+            borderColor: colors.orangeFont,
             backgroundColor: 'yellow',
             width: 60,
             height: 60,
@@ -107,7 +107,7 @@ export default function AvatarPersons({ mb }: AvatarsProps) {
           source={person1}
           style={{
             borderWidth: 2,
-            borderColor: colors.orange,
+            borderColor: colors.orangeFont,
             backgroundColor: 'yellow',
             width: 60,
             height: 60,

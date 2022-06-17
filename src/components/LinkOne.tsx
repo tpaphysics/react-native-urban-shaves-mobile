@@ -26,6 +26,7 @@ function LinkOne({ title, to, mb, mt }: LinkProps) {
         marginBottom: mb,
         marginTop: mt,
         fontSize: 14,
+        height: 25,
         color: colors.white,
         fontFamily: 'RobotoSlab_400Regular',
       }}

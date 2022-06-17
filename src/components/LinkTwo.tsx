@@ -24,6 +24,7 @@ function LinkTwo({ title, to, mb, mt, icon }: LinkProps) {
   return (
     <Link
       style={{
+        height: 25,
         marginBottom: mb,
         marginTop: mt,
         fontSize: 14,

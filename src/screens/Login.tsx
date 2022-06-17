@@ -9,7 +9,7 @@ import Input from '../components/Input';
 import LinkOne from '../components/LinkOne';
 import LinkTwo from '../components/LinkTwo';
 
-function Login() {
+export default function Login() {
   return (
     <View
       style={{
@@ -26,9 +26,9 @@ function Login() {
 
       <Button title="Sigin" />
       <LinkOne mt={32} title="Forgot your password?" to="Remember" />
+      <LinkOne mt={32} title="Dashboard" to="Dashboard" />
+
       <LinkTwo icon="log-in" mt={32} title="Create your account" to="Register" />
     </View>
   );
 }
-
-export default Login;
