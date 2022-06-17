@@ -1,3 +1,5 @@
+import Icon from '@expo/vector-icons/Feather';
+import { Link } from '@react-navigation/native';
 import React from 'react';
 import { View, Image } from 'react-native';
 
@@ -5,12 +7,11 @@ import { colors } from '../../theme';
 import Title from './Fonts/Title';
 
 interface HeaderProps {
-  name: string;
-  message: string;
+  title: string;
   avatar: string;
 }
 
-export default function Header({ name, avatar, message }: HeaderProps) {
+export default function HeaderTwo({ title, avatar }: HeaderProps) {
   return (
     <View
       style={{
@@ -23,18 +24,19 @@ export default function Header({ name, avatar, message }: HeaderProps) {
         style={{
           flexDirection: 'row',
           justifyContent: 'space-between',
-          paddingHorizontal: 26,
+          marginTop: 26,
+          paddingHorizontal: 24,
           alignItems: 'center',
           width: '100%',
         }}>
-        <View style={{}}>
-          <Title color={colors.white} fontFamily="RobotoSlab_400Regular" size={18} lh={28}>
-            {message}
-          </Title>
-          <Title color={colors.orangeFont} fontFamily="RobotoSlab_500Medium" size={20} lh={28}>
-            {name}
-          </Title>
-        </View>
+        <Link to={{ screen: 'Dashboard' }}>
+          <Icon name="arrow-left" size={32} color={colors.orangeFont} />
+        </Link>
+
+        <Title color={colors.orangeFont} fontFamily="RobotoSlab_500Medium" size={20} lh={28}>
+          {title}
+        </Title>
+
         <Image
           source={{ uri: avatar }}
           style={{

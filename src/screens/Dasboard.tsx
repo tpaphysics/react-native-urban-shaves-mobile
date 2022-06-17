@@ -15,7 +15,6 @@ export default function Dashboard() {
       style={{
         flex: 1,
         alignItems: 'center',
-
         backgroundColor: colors.black.background,
       }}>
       <Header avatar="https://i.pravatar.cc/400?img=13" message="Be welcome" name="Eric Copolla" />
@@ -34,9 +33,11 @@ export default function Dashboard() {
         </Title>
         <FlatList
           data={data}
+          disableVirtualization
           keyExtractor={(item) => item.name}
-          renderItem={(data) => {
-            const { avatar, days, name, hours } = data.item;
+          horizontal={false}
+          renderItem={({ item }) => {
+            const { avatar, days, name, hours } = item;
             return (
               <HairdressrsCard avatar={avatar} name={name} hours={hours} days={days} mb={12} />
             );

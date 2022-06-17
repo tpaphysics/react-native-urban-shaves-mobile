@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Image, View } from 'react-native';
 
@@ -10,6 +11,7 @@ import LinkOne from '../components/LinkOne';
 import LinkTwo from '../components/LinkTwo';
 
 export default function Login() {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -24,9 +26,8 @@ export default function Login() {
       <Input icon="mail" placeholder="E-mail" mb={8} />
       <Input icon="lock" placeholder="Password" mb={16} />
 
-      <Button title="Sigin" />
+      <Button title="Sigin" onPress={() => navigation.navigate('Dashboard' as never)} />
       <LinkOne mt={32} title="Forgot your password?" to="Remember" />
-      <LinkOne mt={32} title="Dashboard" to="Dashboard" />
 
       <LinkTwo icon="log-in" mt={32} title="Create your account" to="Register" />
     </View>

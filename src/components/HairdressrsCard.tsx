@@ -1,6 +1,7 @@
 import Icon from '@expo/vector-icons/Feather';
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 
 import { colors } from '../../theme';
 import Title from './Fonts/Title';
@@ -22,8 +23,10 @@ export default function HairdressrsCard({
   mb,
   mt,
 }: HairdressrsCardProps) {
+  const navigation = useNavigation();
   return (
-    <View
+    <TouchableOpacity
+      onPress={() => navigation.navigate('Appointment' as never)}
       style={{
         width: '100%',
         height: 112,
@@ -64,6 +67,6 @@ export default function HairdressrsCard({
           </Title>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
