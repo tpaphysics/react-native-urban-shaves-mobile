@@ -1,5 +1,6 @@
+import { Link, useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 
 import { colors } from '../../theme';
 import Title from './Fonts/Title';
@@ -11,6 +12,7 @@ interface HeaderProps {
 }
 
 export default function Header({ name, avatar, message }: HeaderProps) {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -35,17 +37,19 @@ export default function Header({ name, avatar, message }: HeaderProps) {
             {name}
           </Title>
         </View>
-        <Image
-          source={{ uri: avatar }}
-          style={{
-            borderWidth: 2,
-            borderColor: colors.orange,
-            backgroundColor: colors.black.background,
-            width: 72,
-            height: 72,
-            borderRadius: 72 / 2,
-          }}
-        />
+        <TouchableOpacity onPress={() => navigation.navigate('Profile' as never)}>
+          <Image
+            source={{ uri: avatar }}
+            style={{
+              borderWidth: 2,
+              borderColor: colors.orange,
+              backgroundColor: colors.black.background,
+              width: 72,
+              height: 72,
+              borderRadius: 72 / 2,
+            }}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );

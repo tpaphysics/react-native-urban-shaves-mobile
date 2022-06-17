@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 
+import Profile from './src/Profile';
 import Appointement from './src/screens/Appointement';
 import Dashboard from './src/screens/Dasboard';
 import Forgot from './src/screens/Forgot';
@@ -20,6 +21,7 @@ export default function App() {
         <Stack.Screen name="Remember" component={Forgot} />
         <Stack.Screen name="Appointment" component={Appointement} />
         <Stack.Screen name="Dashboard" component={Dashboard} />
+        <Stack.Screen name="Profile" component={Profile} />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
