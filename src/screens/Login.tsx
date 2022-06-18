@@ -24,7 +24,7 @@ export default function Login() {
       <Image source={logo} style={{ marginBottom: 48 }} />
       <AvatarPersons mb={32} />
       <Input icon="mail" placeholder="E-mail" mb={8} />
-      <Input icon="lock" placeholder="Password" mb={16} />
+      <Input icon="lock" placeholder="Password" mb={16} isPassword />
 
       <Button title="Sigin" onPress={() => navigation.navigate('Dashboard' as never)} />
       <LinkOne mt={32} title="Forgot your password?" to="Remember" />

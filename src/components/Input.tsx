@@ -10,10 +10,12 @@ interface InputProps extends TextInputProps {
   icon: 'mail' | 'user' | 'lock';
   mt?: number;
   mb?: number;
+  isPassword?: boolean;
 }
 
-function Input({ icon, mt, mb, ...props }: InputProps) {
+function Input({ icon, mt, mb, isPassword = false, ...props }: InputProps) {
   const [isFocused, setIsFocused] = useState(false);
+  const [isVisiblePassword, setIsVisiblePassword] = useState(false);
 
   const [fontsLoaded] = useFonts({
     RobotoSlab_400Regular,
@@ -27,7 +29,7 @@ function Input({ icon, mt, mb, ...props }: InputProps) {
       style={{
         width: '100%',
         backgroundColor: colors.black.inputs,
-        justifyContent: 'center',
+
         alignItems: 'center',
         flexDirection: 'row',
         paddingHorizontal: 24,
@@ -41,11 +43,12 @@ function Input({ icon, mt, mb, ...props }: InputProps) {
 
       <TextInput
         {...props}
+        secureTextEntry={isPassword && !isVisiblePassword}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         style={{
           borderWidth: 0,
-          width: '100%',
+          width: '88%',
           height: 50,
           fontFamily: fonts.regular,
           color: colors.orangeFontHard,
@@ -56,6 +59,14 @@ function Input({ icon, mt, mb, ...props }: InputProps) {
         }}
         placeholderTextColor={colors.gray.hard}
       />
+      {isPassword && (
+        <Icon
+          onPress={() => setIsVisiblePassword(!isVisiblePassword)}
+          name={isVisiblePassword ? 'eye-off' : 'eye'}
+          size={20}
+          color={colors.gray.hard}
+        />
+      )}
     </View>
   );
 }
