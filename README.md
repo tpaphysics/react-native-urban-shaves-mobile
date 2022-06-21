@@ -18,7 +18,7 @@
 
 ## **💻 Projeto**
 
-O App mobile <strong>Urban Shaves</strong> está sendo desenvolvido em [React Native](https://reactnative.dev/) utilizando o [Expo](https://docs.expo.dev/).
+O App mobile <strong>Urban Shaves</strong> criado para agendamento de serviços de babearia está sendo desenvolvido em [React Native](https://reactnative.dev/) utilizando o [Expo](https://docs.expo.dev/). O projeto Possui também uma [versão web](https://github.com/tpaphysics/react-urban-shaves-desktop) para gerenciamento dos administradores e uma [API](https://github.com/tpaphysics/nestjs-jwt-authentication), ambos em desenvolvimento.
 
 #### **Screens**
 
