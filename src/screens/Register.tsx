@@ -24,7 +24,7 @@ export default function Register() {
       </Title>
       <Input icon="mail" placeholder="Name" mb={8} />
       <Input icon="mail" placeholder="E-mail" mb={8} />
-      <Input icon="lock" placeholder="Password" mb={16} />
+      <Input icon="lock" placeholder="Password" mb={16} isPassword />
 
       <Button title="Register" />
       <LinkTwo icon="arrow-left" mt={32} title="Back to Login" to="Login" />

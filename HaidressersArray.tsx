@@ -12,7 +12,7 @@ export default [
     hours: '8h at 18',
   },
   {
-    name: 'Brian Alexander',
+    name: 'Brian Rain',
     avatar: 'https://i.pravatar.cc/150?u=10o',
     days: 'Monday at Friday',
     hours: '8h at 18',

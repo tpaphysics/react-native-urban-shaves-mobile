@@ -25,7 +25,7 @@ export default function Header({ name, avatar, message }: HeaderProps) {
         style={{
           flexDirection: 'row',
           justifyContent: 'space-between',
-          paddingHorizontal: 26,
+          paddingHorizontal: 12,
           alignItems: 'center',
           width: '100%',
         }}>

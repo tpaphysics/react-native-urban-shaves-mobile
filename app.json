@@ -5,13 +5,12 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#2f271e"
     },
-    
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -26,7 +25,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#2f271e"
-      }
+      },
+      "package": "urban.apk"
     },
     "web": {
       "favicon": "./assets/favicon.png"

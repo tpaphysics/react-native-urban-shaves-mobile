@@ -33,7 +33,7 @@ export default function HeaderTwo({
           flexDirection: 'row',
           justifyContent: 'space-between',
           marginTop: 26,
-          paddingHorizontal: 24,
+          paddingHorizontal: 12,
           alignItems: 'center',
           width: '100%',
         }}>

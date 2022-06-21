@@ -1,12 +1,14 @@
 import React from 'react';
-import { FlatList, SafeAreaView, ScrollView, View } from 'react-native';
+import { FlatList, SafeAreaView, View } from 'react-native';
 
-import data from '../../HaidressersList';
+import AppointmentTimeArray from '../../AppointmentTimeArray';
+import data from '../../HaidressersArray';
 import { colors } from '../../theme';
+import AppointmentTime from '../components/AppointmentTime';
+import Calendar from '../components/Calendar';
 import Title from '../components/Fonts/Title';
 import HairdressersSmallCard from '../components/HairdressersSmallCard';
 import HeadetTwo from '../components/HeaderTwo';
-import LinkTwo from '../components/LinkTwo';
 
 export default function Appointement() {
   return (
@@ -41,17 +43,17 @@ export default function Appointement() {
         />
       </View>
 
-      <ScrollView
+      <View
         style={{
           width: '100%',
-          paddingHorizontal: 24,
+          paddingHorizontal: 12,
         }}>
-        <Title color={colors.orangeFont} size={24} fontFamily="RobotoSlab_500Medium">
-          Appoitments
+        <Title color={colors.orangeFont} fontFamily="RobotoSlab_500Medium" size={22} mb={16}>
+          Make your appointment
         </Title>
-
-        <LinkTwo icon="arrow-left" mt={32} title="Back to Login" to="Login" />
-      </ScrollView>
+        <Calendar />
+      </View>
+      <AppointmentTime times={AppointmentTimeArray} mt={24} nightService />
     </SafeAreaView>
   );
 }

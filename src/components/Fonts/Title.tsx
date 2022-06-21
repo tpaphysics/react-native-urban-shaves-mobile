@@ -14,9 +14,11 @@ interface TitleProps extends TextProps {
   lh?: number;
   mb?: number;
   mt?: number;
+  mr?: number;
+  ml?: number;
 }
 
-function Title({ children, size, color, mb, mt, fontFamily, lh }: TitleProps) {
+function Title({ children, size, color, mb, mt, mr, ml, fontFamily, lh }: TitleProps) {
   const [fontsLoaded] = useFonts({
     RobotoSlab_500Medium,
     RobotoSlab_400Regular,
@@ -32,6 +34,8 @@ function Title({ children, size, color, mb, mt, fontFamily, lh }: TitleProps) {
         fontSize: size,
         marginBottom: mb,
         marginTop: mt,
+        marginLeft: ml,
+        marginRight: mr,
         lineHeight: lh,
       }}>
       {children}

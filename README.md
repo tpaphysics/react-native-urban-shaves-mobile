@@ -18,31 +18,37 @@
 
 ## **💻 Projeto**
 
-O App mobile <strong>Urban Shaves</strong> foi desenvolvido em [React Native](https://reactnative.dev/) utilizando o [Expo](https://docs.expo.dev/).
+O App mobile <strong>Urban Shaves</strong> está sendo desenvolvido em [React Native](https://reactnative.dev/) utilizando o [Expo](https://docs.expo.dev/).
 
 #### **Screens**
 
 <p align="center">
+  <img alt="splash" src="./assets/splashScreen.png" width="240px">
   <img alt="login" src="./assets/login.png" widht="240px">
   <img alt="register" src="./assets/register.png" widht="240px">
-  <img alt="forgot" src="./assets/forgot.png" width="240px">
+  
 </p>
 <p align="center">
-  <img alt="dashboard" src="./assets/dashboard.png" widht="240px"/>
-    <img alt="profile" src="./assets/profile.png" widht="240px"/>
+  <img alt="forgot" src="./assets/forgot.png" width="240px">
+  <img alt="profile" src="./assets/profile.png" widht="240px"/>
+  
+</p>
 
+<p align="center">
+  <img alt="dashboard" src="./assets/dashboard.png" widht="240px">
+  <img alt="appointment" src="./assets/appointment.png" widht="240px">
 </p>
 
 ## **🔖 Layout**
 
-<p>Criamos a logo <strong>Urban Shaves</strong>, utilizamos a seguinte tabela de cores:
+<p>Criamos a logo <strong>Urban Shaves</strong>, utilizando a seguinte tabela de cores:
 </p>
 <img alt="paleta" src="./src/assets/pallet.png" width="300px">
   
 ## Get Started
 
 Certifique-se de usar a versão lts do node v16.15.1. Para para gerenciar a versão correta node instale o [nvm](https://github.com/nvm-sh/nvm).
-Instale o App [Expo](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US) em seu dispositivo mobile, execute os comandos abaixo. Faça o scanner do QR Code gerado.
+Instale o App [Expo](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US) em seu dispositivo mobile, execute os comandos abaixo e faça o scanner do QR Code gerado.
 
 ```bash
 # Instalação das dependências
@@ -54,7 +60,7 @@ $ yarn start
 
 ## Observação
 
-O projeto possui um App mobile, desktop e uma API que estão em desenvolvimento.
+Em desenvolvimento.
 
 ## **👨‍🚀 Autor**
 
