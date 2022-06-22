@@ -30,11 +30,11 @@ export default function Appointement() {
           horizontal
           showsHorizontalScrollIndicator={false}
           renderItem={({ item, index }) => {
-            const { avatar } = item;
+            const { avatar, name } = item;
             return (
               <HairdressersSmallCard
                 avatar={avatar}
-                name="Alex Mura.."
+                name={name}
                 mr={12}
                 ml={index === 0 ? 12 : 0}
               />

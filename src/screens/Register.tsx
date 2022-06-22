@@ -1,12 +1,12 @@
 import React from 'react';
-import { Image, View } from 'react-native';
+import { View } from 'react-native';
 
 import colors from '../../theme/colors';
-import logo from '../assets/logo-t.png';
 import Button from '../components/Button';
 import Title from '../components/Fonts/Title';
 import Input from '../components/Input';
 import LinkTwo from '../components/LinkTwo';
+import Logo from '../components/Logo';
 
 export default function Register() {
   return (
@@ -18,7 +18,7 @@ export default function Register() {
         backgroundColor: colors.black.background,
         paddingHorizontal: 10,
       }}>
-      <Image source={logo} style={{ marginBottom: 48 }} />
+      <Logo mb={48} w={260} />
       <Title color={colors.orangeFont} fontFamily="RobotoSlab_500Medium" size={18} mb={24}>
         Create your account
       </Title>

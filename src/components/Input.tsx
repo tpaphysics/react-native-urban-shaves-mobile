@@ -1,10 +1,10 @@
 import { RobotoSlab_400Regular, useFonts } from '@expo-google-fonts/roboto-slab';
 import Icon from '@expo/vector-icons/Feather';
-import AppLoading from 'expo-app-loading';
 import React, { useState } from 'react';
 import { View, TextInput, TextInputProps } from 'react-native';
 
 import { colors, fonts } from '../../theme';
+import UrbanShaves from '../screens/UrbanShaves';
 
 interface InputProps extends TextInputProps {
   icon: 'mail' | 'user' | 'lock';
@@ -22,7 +22,7 @@ function Input({ icon, mt, mb, isPassword = false, ...props }: InputProps) {
   });
 
   if (!fontsLoaded) {
-    return <AppLoading />;
+    return <UrbanShaves />;
   }
   return (
     <View

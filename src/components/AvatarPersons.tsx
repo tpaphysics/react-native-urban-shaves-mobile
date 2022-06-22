@@ -1,12 +1,13 @@
 import { RobotoSlab_500Medium, useFonts } from '@expo-google-fonts/roboto-slab';
-import AppLoading from 'expo-app-loading';
 import React from 'react';
 import { View, Text, Image, ViewProps } from 'react-native';
 
-import { colors, fonts } from '../../theme';
+import { colors } from '../../theme';
 import person1 from '../assets/person1.png';
 import person2 from '../assets/person2.png';
 import person3 from '../assets/person3.png';
+import UrbanShaves from '../screens/UrbanShaves';
+import Title from './Fonts/Title';
 
 interface AvatarsProps extends ViewProps {
   mb: number;
@@ -16,7 +17,7 @@ export default function AvatarPersons({ mb }: AvatarsProps) {
     RobotoSlab_500Medium,
   });
   if (!fontsLoaded) {
-    return <AppLoading />;
+    return <UrbanShaves />;
   }
   return (
     <View
@@ -25,16 +26,14 @@ export default function AvatarPersons({ mb }: AvatarsProps) {
         justifyContent: 'flex-end',
         marginBottom: mb,
       }}>
-      <Text
-        style={{
-          marginRight: 'auto',
-          fontSize: 18,
-          color: colors.orangeFont,
-          marginBottom: 16,
-          fontFamily: fonts.medium,
-        }}>
+      <Title
+        color={colors.orangeFont}
+        size={18}
+        fontFamily="RobotoSlab_500Medium"
+        mr="auto"
+        mb={18}>
         Be your best version
-      </Text>
+      </Title>
       <View
         style={{
           flexDirection: 'row',
@@ -55,15 +54,9 @@ export default function AvatarPersons({ mb }: AvatarsProps) {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Text
-            style={{
-              color: colors.orangeFont,
-              fontSize: 16,
-              fontWeight: 'bold',
-              fontFamily: fonts.medium,
-            }}>
+          <Title color={colors.orangeFont} size={16} fontFamily="RobotoSlab_500Medium">
             You
-          </Text>
+          </Title>
         </View>
         <View
           style={{

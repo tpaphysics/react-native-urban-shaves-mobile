@@ -9,6 +9,7 @@ import Forgot from './src/screens/Forgot';
 import Login from './src/screens/Login';
 import Profile from './src/screens/Profile';
 import Register from './src/screens/Register';
+import UrbanShaves from './src/screens/UrbanShaves';
 
 export default function App() {
   const Stack = createNativeStackNavigator();

@@ -1,10 +1,10 @@
 import { RobotoSlab_400Regular, useFonts } from '@expo-google-fonts/roboto-slab';
 import Icon from '@expo/vector-icons/Feather';
 import { Link } from '@react-navigation/native';
-import AppLoading from 'expo-app-loading';
 import React from 'react';
 
 import { colors } from '../../theme';
+import UrbanShaves from '../screens/UrbanShaves';
 
 interface LinkProps {
   title: string;
@@ -19,7 +19,7 @@ function LinkTwo({ title, to, mb, mt, icon }: LinkProps) {
     RobotoSlab_400Regular,
   });
   if (!fontsLoaded) {
-    return <AppLoading />;
+    return <UrbanShaves />;
   }
   return (
     <Link

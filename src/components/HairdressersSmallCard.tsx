@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, TouchableOpacity } from 'react-native';
+import { Image, TouchableOpacity } from 'react-native';
 
 import { colors } from '../../theme';
 import Title from './Fonts/Title';
@@ -17,6 +17,15 @@ export default function HairdressersSmallCard({
   mr,
   ml,
 }: HairdressersSmallCardProps) {
+  //useEffect(() => {}, []);
+  function formatAvatarName(name: string) {
+    if (name.length > 11) {
+      return `${name.substring(0, 8)}...`;
+    } else {
+      return name;
+    }
+  }
+
   return (
     <TouchableOpacity
       style={{
@@ -24,9 +33,9 @@ export default function HairdressersSmallCard({
         alignItems: 'center',
         backgroundColor: colors.black.shape,
         width: 160,
-        height: 49.4,
+        height: 50.4,
         borderRadius: 10,
-        padding: 8,
+        padding: 12,
         marginRight: mr,
         marginLeft: ml,
       }}>
@@ -41,7 +50,7 @@ export default function HairdressersSmallCard({
         }}
       />
       <Title color={colors.white} fontFamily="RobotoSlab_500Medium" size={14}>
-        {name}
+        {formatAvatarName(name)}
       </Title>
     </TouchableOpacity>
   );

@@ -1,21 +1,14 @@
-import { RobotoSlab_500Medium, useFonts } from '@expo-google-fonts/roboto-slab';
-import AppLoading from 'expo-app-loading';
 import React from 'react';
-import { TouchableOpacity, TouchableOpacityProps, Text } from 'react-native';
+import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
 
-import { colors, fonts } from '../../theme';
+import { colors } from '../../theme';
+import Title from './Fonts/Title';
 
 interface ButtonProps extends TouchableOpacityProps {
   title: string;
 }
 
 function Button({ title, ...props }: ButtonProps) {
-  const [fontsLoaded] = useFonts({
-    RobotoSlab_500Medium,
-  });
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  }
   return (
     <TouchableOpacity
       {...props}
@@ -27,13 +20,9 @@ function Button({ title, ...props }: ButtonProps) {
         backgroundColor: colors.orange,
         borderRadius: 10,
       }}>
-      <Text
-        style={{
-          fontFamily: fonts.medium,
-          fontSize: 16,
-        }}>
+      <Title fontFamily="RobotoSlab_500Medium" size={16} color={colors.black.background}>
         {title}
-      </Text>
+      </Title>
     </TouchableOpacity>
   );
 }
