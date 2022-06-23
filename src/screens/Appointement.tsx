@@ -1,4 +1,3 @@
-import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { FlatList, SafeAreaView, View } from 'react-native';
 
@@ -7,12 +6,11 @@ import data from '../../HaidressersArray';
 import { colors } from '../../theme';
 import AppointmentTime from '../components/AppointmentTime';
 import Calendar from '../components/Calendar';
-import Title from '../components/Fonts/Title';
 import HairdressersSmallCard from '../components/HairdressersSmallCard';
 import HeadetTwo from '../components/HeaderTwo';
+import Title from '../components/Title';
 
 export default function Appointement() {
-  const navigation = useNavigation();
   return (
     <SafeAreaView
       style={{
@@ -23,10 +21,7 @@ export default function Appointement() {
       <HeadetTwo avatar="https://i.pravatar.cc/400?img=13" title="Appointment" />
       <View style={{ height: 148, alignItems: 'center', justifyContent: 'center' }}>
         <FlatList
-          disableVirtualization
-          style={{
-            paddingVertical: 48,
-          }}
+          style={{ marginTop: 48 }}
           data={data}
           keyExtractor={(item) => item.name}
           horizontal

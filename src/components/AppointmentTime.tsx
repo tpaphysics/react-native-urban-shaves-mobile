@@ -4,7 +4,7 @@ import { View, ScrollView, TouchableOpacity } from 'react-native';
 
 import { colors } from '../../theme';
 import Button from './Button';
-import Title from './Fonts/Title';
+import Title from './Title';
 
 interface Time {
   time: number;

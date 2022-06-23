@@ -4,7 +4,7 @@ import React from 'react';
 import { View, Image, TouchableOpacity } from 'react-native';
 
 import { colors } from '../../theme';
-import Title from './Fonts/Title';
+import Title from './Title';
 
 interface HeaderProps {
   title: string;
@@ -33,7 +33,7 @@ export default function HeaderTwo({
           flexDirection: 'row',
           justifyContent: 'space-between',
           marginTop: 26,
-          paddingHorizontal: 12,
+
           alignItems: 'center',
           width: '100%',
         }}>

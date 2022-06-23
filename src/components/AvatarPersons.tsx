@@ -7,7 +7,7 @@ import person1 from '../assets/person1.png';
 import person2 from '../assets/person2.png';
 import person3 from '../assets/person3.png';
 import UrbanShaves from '../screens/UrbanShaves';
-import Title from './Fonts/Title';
+import Title from './Title';
 
 interface AvatarsProps extends ViewProps {
   mb: number;

@@ -4,10 +4,10 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import data from '../../HaidressersArray';
 import colors from '../../theme/colors';
-import Title from '../components/Fonts/Title';
 import HairdressrsCard from '../components/HairdressrsCard';
 import Header from '../components/Header';
 import LinkTwo from '../components/LinkTwo';
+import Title from '../components/Title';
 
 export default function Dashboard() {
   return (

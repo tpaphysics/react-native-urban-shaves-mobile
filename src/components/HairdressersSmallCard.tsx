@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, TouchableOpacity } from 'react-native';
 
 import { colors } from '../../theme';
-import Title from './Fonts/Title';
+import Title from './Title';
 
 interface HairdressersSmallCardProps {
   name: string;
@@ -32,8 +32,8 @@ export default function HairdressersSmallCard({
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: colors.black.shape,
-        width: 160,
-        height: 50.4,
+        width: 175,
+        height: 60,
         borderRadius: 10,
         padding: 12,
         marginRight: mr,

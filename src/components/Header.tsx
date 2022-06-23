@@ -1,9 +1,9 @@
-import { Link, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Image, TouchableOpacity } from 'react-native';
 
 import { colors } from '../../theme';
-import Title from './Fonts/Title';
+import Title from './Title';
 
 interface HeaderProps {
   name: string;

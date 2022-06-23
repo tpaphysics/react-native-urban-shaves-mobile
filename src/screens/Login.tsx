@@ -1,6 +1,13 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { View } from 'react-native';
+import {
+  Keyboard,
+  KeyboardAvoidingView,
+  KeyboardAvoidingViewBase,
+  Touchable,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 
 import colors from '../../theme/colors';
 import AvatarPersons from '../components/AvatarPersons';
@@ -19,17 +26,23 @@ export default function Login() {
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: colors.black.background,
-        paddingHorizontal: 10,
+        paddingHorizontal: 12,
       }}>
-      <Logo mb={48} w={260} />
-      <AvatarPersons mb={32} />
-      <Input icon="mail" placeholder="E-mail" mb={8} />
-      <Input icon="lock" placeholder="Password" mb={16} isPassword />
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <KeyboardAvoidingView behavior="position" enabled>
+          <View style={{ alignItems: 'center' }}>
+            <Logo mb={48} w={260} />
+            <AvatarPersons mb={32} />
+            <Input icon="mail" placeholder="E-mail" mb={8} />
+            <Input icon="lock" placeholder="Password" mb={16} isPassword />
 
-      <Button title="Sigin" onPress={() => navigation.navigate('Dashboard' as never)} />
-      <LinkOne mt={32} title="Forgot your password?" to="Remember" />
+            <Button title="Sigin" onPress={() => navigation.navigate('Dashboard' as never)} />
+            <LinkOne mt={32} title="Forgot your password?" to="Remember" />
 
-      <LinkTwo icon="log-in" mt={32} title="Create your account" to="Register" />
+            <LinkTwo icon="log-in" mt={32} title="Create your account" to="Register" />
+          </View>
+        </KeyboardAvoidingView>
+      </TouchableWithoutFeedback>
     </View>
   );
 }

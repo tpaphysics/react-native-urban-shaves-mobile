@@ -1,11 +1,11 @@
 import Icon from '@expo/vector-icons/AntDesign';
 import { useRoute } from '@react-navigation/native';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
 import { colors } from '../../theme';
 import Button from '../components/Button';
-import Title from '../components/Fonts/Title';
+import Title from '../components/Title';
 
 export default function SuccessConfirmation() {
   const route = useRoute();

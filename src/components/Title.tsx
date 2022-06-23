@@ -4,7 +4,7 @@ import {
   useFonts,
 } from '@expo-google-fonts/roboto-slab';
 import React from 'react';
-import { Text, TextProps, TextStyle } from 'react-native';
+import { Text, TextProps } from 'react-native';
 import {
   BallIndicator,
   BarIndicator,
@@ -17,8 +17,8 @@ import {
   WaveIndicator,
 } from 'react-native-indicators';
 
-import { colors } from '../../../theme';
-import UrbanShaves from '../../screens/UrbanShaves';
+import { colors } from '../../theme';
+import UrbanShaves from '../screens/UrbanShaves';
 
 interface TitleProps extends TextProps {
   size: 12 | 14 | 16 | 18 | 20 | 22 | 24 | 42;
