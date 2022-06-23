@@ -4,6 +4,7 @@ export default {
   orangeFont: '#E6D1AB',
   orangeFontHard: '#af9d7a',
   white: '#F4EDE8',
+  green: '#91b491',
   purple: '#573C41',
   gray: {
     normal: '#999591',

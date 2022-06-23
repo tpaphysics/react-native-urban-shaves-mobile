@@ -4,7 +4,7 @@ import {
   useFonts,
 } from '@expo-google-fonts/roboto-slab';
 import React from 'react';
-import { Text, TextProps } from 'react-native';
+import { Text, TextProps, TextStyle } from 'react-native';
 import {
   BallIndicator,
   BarIndicator,
@@ -21,7 +21,7 @@ import { colors } from '../../../theme';
 import UrbanShaves from '../../screens/UrbanShaves';
 
 interface TitleProps extends TextProps {
-  size: 12 | 14 | 16 | 18 | 20 | 22 | 24;
+  size: 12 | 14 | 16 | 18 | 20 | 22 | 24 | 42;
   color: string;
   fontFamily: 'RobotoSlab_400Regular' | 'RobotoSlab_500Medium';
   lh?: number;
@@ -29,9 +29,10 @@ interface TitleProps extends TextProps {
   mt?: number;
   mr?: number | string;
   ml?: number | string;
+  ta?: 'center' | 'justify' | 'right' | 'center' | 'auto';
 }
 
-function Title({ children, size, color, mb, mt, mr, ml, fontFamily, lh }: TitleProps) {
+function Title({ children, size, color, mb, mt, mr, ml, fontFamily, lh, ta }: TitleProps) {
   const [fontsLoaded] = useFonts({
     RobotoSlab_500Medium,
     RobotoSlab_400Regular,
@@ -50,6 +51,7 @@ function Title({ children, size, color, mb, mt, mr, ml, fontFamily, lh }: TitleP
         marginLeft: ml,
         marginRight: mr,
         lineHeight: lh,
+        textAlign: ta,
       }}>
       {children}
     </Text>

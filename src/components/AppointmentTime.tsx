@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { View, ScrollView, TouchableOpacity } from 'react-native';
 
@@ -25,6 +26,7 @@ export default function AppointmentTime({
   nightService = false,
 }: AppointmentTimeProps) {
   const [selectedHour, setSelectedHour] = useState(0);
+  const navigator = useNavigation();
   return (
     <View style={{ width: '100%', paddingLeft: 12, marginTop: mt, marginBottom: mb }}>
       <Title color={colors.orangeFontHard} fontFamily="RobotoSlab_500Medium" size={18} mb={16}>
@@ -150,7 +152,17 @@ export default function AppointmentTime({
         </>
       )}
       <View style={{ marginRight: 12 }}>
-        <Button title="Confirm appointment" />
+        <Button
+          title="Confirm appointment"
+          onPress={() =>
+            navigator.navigate(
+              'SuccessConfirmation' as never,
+              {
+                day: 'Tuesday',
+              } as never
+            )
+          }
+        />
       </View>
     </View>
   );

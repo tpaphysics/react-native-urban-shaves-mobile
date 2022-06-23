@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { FlatList, SafeAreaView, View } from 'react-native';
 
@@ -11,6 +12,7 @@ import HairdressersSmallCard from '../components/HairdressersSmallCard';
 import HeadetTwo from '../components/HeaderTwo';
 
 export default function Appointement() {
+  const navigation = useNavigation();
   return (
     <SafeAreaView
       style={{

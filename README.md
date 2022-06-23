@@ -31,12 +31,12 @@ O App mobile <strong>Urban Shaves</strong> criado para agendamento de serviços 
 <p align="center">
   <img alt="forgot" src="./assets/forgot.png" width="240px">
   <img alt="profile" src="./assets/profile.png" widht="240px"/>
-  
+  <img alt="dashboard" src="./assets/dashboard.png" widht="240px">
 </p>
 
 <p align="center">
-  <img alt="dashboard" src="./assets/dashboard.png" widht="240px">
   <img alt="appointment" src="./assets/appointment.png" widht="240px">
+  <img alt="success" src="./assets/success.png" widht="240px">
 </p>
 
 ## **🔖 Layout**
