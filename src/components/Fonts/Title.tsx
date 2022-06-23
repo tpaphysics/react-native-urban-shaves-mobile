@@ -5,7 +5,19 @@ import {
 } from '@expo-google-fonts/roboto-slab';
 import React from 'react';
 import { Text, TextProps } from 'react-native';
+import {
+  BallIndicator,
+  BarIndicator,
+  DotIndicator,
+  MaterialIndicator,
+  PacmanIndicator,
+  PulseIndicator,
+  SkypeIndicator,
+  UIActivityIndicator,
+  WaveIndicator,
+} from 'react-native-indicators';
 
+import { colors } from '../../../theme';
 import UrbanShaves from '../../screens/UrbanShaves';
 
 interface TitleProps extends TextProps {
@@ -25,7 +37,7 @@ function Title({ children, size, color, mb, mt, mr, ml, fontFamily, lh }: TitleP
     RobotoSlab_400Regular,
   });
   if (!fontsLoaded) {
-    return <UrbanShaves />;
+    return <DotIndicator color={colors.orangeFontHard} size={3} />;
   }
   return (
     <Text
