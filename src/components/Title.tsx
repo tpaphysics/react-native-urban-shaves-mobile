@@ -18,10 +18,9 @@ import {
 } from 'react-native-indicators';
 
 import { colors } from '../../theme';
-import UrbanShaves from '../screens/UrbanShaves';
 
 interface TitleProps extends TextProps {
-  size: 12 | 14 | 16 | 18 | 20 | 22 | 24 | 42;
+  size: 12 | 14 | 16 | 18 | 20 | 22 | 24 | 36;
   color: string;
   fontFamily: 'RobotoSlab_400Regular' | 'RobotoSlab_500Medium';
   lh?: number;

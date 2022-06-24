@@ -22,7 +22,7 @@ export default function SuccessConfirmation() {
       <Icon name="check" size={96} color={colors.green} />
 
       <Title
-        size={42}
+        size={36}
         color={colors.orangeFont}
         fontFamily="RobotoSlab_500Medium"
         mt={24}

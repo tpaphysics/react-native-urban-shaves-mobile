@@ -27,6 +27,7 @@ export default function HeaderTwo({
         height: 132,
         width: '100%',
         backgroundColor: bg,
+        paddingHorizontal: 12,
       }}>
       <View
         style={{

@@ -20,12 +20,12 @@ export default function Header({ name, avatar, message }: HeaderProps) {
         height: 132,
         width: '100%',
         backgroundColor: colors.black.inputs,
+        paddingHorizontal: 12,
       }}>
       <View
         style={{
           flexDirection: 'row',
           justifyContent: 'space-between',
-          paddingHorizontal: 12,
           alignItems: 'center',
           width: '100%',
         }}>
