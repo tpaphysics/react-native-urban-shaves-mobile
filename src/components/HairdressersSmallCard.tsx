@@ -1,14 +1,15 @@
-import React from 'react';
-import { Image, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { Image, TouchableOpacity, TouchableOpacityProps, View } from 'react-native';
 
 import { colors } from '../../theme';
 import Title from './Title';
 
-interface HairdressersSmallCardProps {
+interface HairdressersSmallCardProps extends TouchableOpacityProps {
   name: string;
   avatar: string;
   mr?: number;
   ml?: number;
+  isSelected: string;
 }
 
 export default function HairdressersSmallCard({
@@ -16,11 +17,14 @@ export default function HairdressersSmallCard({
   avatar,
   mr,
   ml,
+  isSelected,
+  ...props
 }: HairdressersSmallCardProps) {
   //useEffect(() => {}, []);
+
   function formatAvatarName(name: string) {
-    if (name.length > 11) {
-      return `${name.substring(0, 8)}...`;
+    if (name.length > 15) {
+      return `${name.substring(0, 12)}...`;
     } else {
       return name;
     }
@@ -28,28 +32,30 @@ export default function HairdressersSmallCard({
 
   return (
     <TouchableOpacity
+      {...props}
       style={{
-        flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: colors.black.shape,
-        width: 175,
-        height: 60,
+        justifyContent: 'center',
         borderRadius: 10,
-        padding: 12,
         marginRight: mr,
         marginLeft: ml,
       }}>
       <Image
         source={{ uri: avatar }}
         style={{
+          borderWidth: 2,
+          borderColor: isSelected === name ? colors.orange : colors.black.shape,
           backgroundColor: colors.black.background,
-          width: 40,
-          height: 40,
-          borderRadius: 40 / 2,
-          marginRight: 14,
+          width: 96,
+          height: 96,
+          borderRadius: 96 / 2,
         }}
       />
-      <Title color={colors.white} fontFamily="RobotoSlab_500Medium" size={14}>
+      <Title
+        color={isSelected === name ? colors.orange : colors.white}
+        fontFamily="RobotoSlab_500Medium"
+        size={14}
+        mt={6}>
         {formatAvatarName(name)}
       </Title>
     </TouchableOpacity>
