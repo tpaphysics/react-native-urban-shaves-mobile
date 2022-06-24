@@ -25,8 +25,8 @@ export default function Dashboard() {
             color={colors.orangeFont}
             size={24}
             fontFamily="RobotoSlab_500Medium"
-            mt={32}
-            mb={24}>
+            mt={12}
+            mb={16}>
             Hairdressers
           </Title>
         }

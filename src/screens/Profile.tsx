@@ -1,6 +1,5 @@
 import Icon from '@expo/vector-icons/Feather';
 import React from 'react';
-import { useForm } from 'react-hook-form';
 import {
   Image,
   View,
@@ -12,24 +11,10 @@ import {
 } from 'react-native';
 
 import { colors } from '../../theme';
-import Button from '../components/Button';
+import ProfileForm from '../Forms/ProfileForm';
 import HeaderTwo from '../components/HeaderTwo';
-import Input from '../components/Input';
-
-interface FormData {
-  name: string;
-  email: string;
-  password: string;
-  newPassword: string;
-  confirmNewPassword: string;
-}
 
 export default function Profile() {
-  const { control, handleSubmit } = useForm<FormData>();
-
-  function onSubmit(data: FormData): void {
-    console.warn('form', data);
-  }
   return (
     <View
       style={{
@@ -77,33 +62,7 @@ export default function Profile() {
                   <Icon name="camera" size={24} color={colors.black.background} />
                 </TouchableOpacity>
               </View>
-
-              <Input name="name" control={control} icon="user" placeholder="Name" mb={8} />
-              <Input
-                name="email"
-                control={control}
-                autoCapitalize="none"
-                keyboardType="email-address"
-                icon="mail"
-                placeholder="Email"
-                mb={32}
-              />
-              <Input name="password" control={control} icon="user" placeholder="Password" mb={8} />
-              <Input
-                name="newPassword"
-                control={control}
-                icon="lock"
-                placeholder="New password"
-                mb={8}
-              />
-              <Input
-                name="confirmNewPassword"
-                control={control}
-                icon="lock"
-                placeholder="Confirm new password"
-                mb={16}
-              />
-              <Button title="Confirm" onPress={handleSubmit(onSubmit)} />
+              <ProfileForm />
             </View>
           </KeyboardAvoidingView>
         </TouchableWithoutFeedback>
