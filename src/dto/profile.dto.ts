@@ -1,6 +1,6 @@
-import { IsEmail, IsOptional, Length, ValidateIf } from 'class-validator';
+import { IsEmail, IsOptional, Length, Validate, ValidateIf } from 'class-validator';
 
-import { Match } from '../decorators/match.decorator';
+import { CustomMatchPasswords } from '../decorators/custonMatchPasswordEqual';
 
 export class ProfileDto {
   @IsOptional()
@@ -8,16 +8,22 @@ export class ProfileDto {
   @Length(6, 15)
   name?: string;
 
+  @IsOptional()
+  @ValidateIf((field) => field.email !== '')
   @IsEmail()
-  email!: string;
+  email?: string;
 
   @Length(6, 15)
   password!: string;
 
+  @IsOptional()
+  @ValidateIf((field) => field.newPassword !== '')
   @Length(6, 15)
-  newPassword!: string;
+  newPassword?: string;
 
-  @Match('newPassword')
+  @IsOptional()
+  @ValidateIf((field) => field.newPassword !== '')
   @Length(6, 15)
-  confirmNewPassword!: string;
+  @Validate(CustomMatchPasswords, ['newPassword'])
+  confirmNewPassword?: string;
 }

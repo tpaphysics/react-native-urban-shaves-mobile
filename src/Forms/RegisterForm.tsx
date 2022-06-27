@@ -1,25 +1,43 @@
+import { classValidatorResolver } from '@hookform/resolvers/class-validator';
 import { useNavigation } from '@react-navigation/native';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import Toast from 'react-native-toast-message';
 
 import Button from '../components/Button';
 import Input from '../components/Input';
+import { RegisterDto } from '../dto/register.dto';
 
-interface FormData {
-  name: string;
-  email: string;
-  password: string;
-}
 export default function RegisterForm() {
-  const { control, handleSubmit } = useForm<FormData>();
+  const resolver = classValidatorResolver(RegisterDto);
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<RegisterDto>({ resolver });
   const navigation = useNavigation();
 
-  function onSubmit(data: FormData): void {
+  function onSubmit(data: RegisterDto): void {
     console.warn('form', data);
     navigation.navigate('Login' as never);
   }
+
+  useEffect(() => {
+    if (errors) {
+      for (const [key, value] of Object.entries(errors)) {
+        if (key) {
+          Toast.show({
+            type: 'error',
+            text1: key,
+            text2: value.message,
+          });
+        }
+      }
+    }
+  }, [errors]);
   return (
     <>
+      {errors && <Toast />}
       <Input name="name" control={control} icon="user" placeholder="Name" mb={8} />
       <Input
         name="email"

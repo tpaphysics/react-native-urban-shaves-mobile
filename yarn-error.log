@@ -1,5 +1,5 @@
 Arguments: 
-  /home/chewbacca/.nvm/versions/node/v18.1.0/bin/node /usr/local/bin/yarn add @types/react-native-toast-message -D
+  /home/chewbacca/.nvm/versions/node/v18.1.0/bin/node /usr/local/bin/yarn add @types/toastify-react-native -D
 
 PATH: 
   /home/chewbacca/.nvm/versions/node/v18.1.0/bin:/home/chewbacca/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2freact-native-toast-message: Not found
+  Error: https://registry.yarnpkg.com/@types%2ftoastify-react-native: Not found
       at params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:67029:18)
       at self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140883:22)
       at Request.emit (node:events:527:28)
@@ -62,8 +62,9 @@ npm manifest:
       "react-native-modal-datetime-picker": "^13.1.2",
       "react-native-safe-area-context": "4.2.4",
       "react-native-screens": "~3.11.1",
-      "react-native-toast-message": "^2.1.5",
-      "react-native-web": "0.17.7"
+      "react-native-toast-message": "v2",
+      "react-native-web": "0.17.7",
+      "toastify-react-native": "^2.0.0"
     },
     "devDependencies": {
       "@babel/core": "^7.12.9",
@@ -6826,7 +6827,7 @@ Lockfile:
       react-freeze "^1.0.0"
       warn-once "^0.1.0"
   
-  react-native-toast-message@^2.1.5:
+  react-native-toast-message@v2:
     version "2.1.5"
     resolved "https://registry.yarnpkg.com/react-native-toast-message/-/react-native-toast-message-2.1.5.tgz#550acb9c6c0f1ee49c6b57b65a56d34e297eb723"
     integrity sha512-mk3rELtBEhrhWBCN6CTaw0gypgL9ZNauX3xx1LUs4uee9vc0pVsghrKxO57vroUCcNL2hDeZSLJWdQNMCkGeaQ==
@@ -7865,6 +7866,11 @@ Lockfile:
       extend-shallow "^3.0.2"
       regex-not "^1.0.2"
       safe-regex "^1.1.0"
+  
+  toastify-react-native@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/toastify-react-native/-/toastify-react-native-2.0.0.tgz#5a44d45156dd3aec4b43f349b68c29fc5f323bb4"
+    integrity sha512-1OZVtZifjSTR4VNcNlbBtTlN79eU7Cp6foyJwd1p7zwlQP6jbzSf0EzgTNNQ8gR2m8vu5X8YtysE9e/2GHXzRA==
   
   toidentifier@1.0.0:
     version "1.0.0"

@@ -25,13 +25,14 @@ export default function ForgotForm() {
 
   useEffect(() => {
     if (errors) {
-      const { email } = errors;
-      if (email) {
-        Toast.show({
-          type: 'error',
-          text1: 'Email!',
-          text2: email.message,
-        });
+      for (const [key, value] of Object.entries(errors)) {
+        if (key) {
+          Toast.show({
+            type: 'error',
+            text1: key,
+            text2: value.message,
+          });
+        }
       }
     }
   }, [errors]);

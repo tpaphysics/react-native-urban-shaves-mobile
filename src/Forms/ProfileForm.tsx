@@ -1,28 +1,43 @@
+import { classValidatorResolver } from '@hookform/resolvers/class-validator';
 import { useNavigation } from '@react-navigation/native';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import Toast from 'react-native-toast-message';
 
 import Button from '../components/Button';
 import Input from '../components/Input';
-
-interface FormData {
-  name: string;
-  email: string;
-  password: string;
-  newPassword: string;
-  confirmNewPassword: string;
-}
+import { ProfileDto } from '../dto/profile.dto';
 
 export default function ProfileForm() {
-  const { control, handleSubmit } = useForm<FormData>();
+  const resolver = classValidatorResolver(ProfileDto);
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ProfileDto>({ resolver });
   const navigation = useNavigation();
 
-  function onSubmit(data: FormData): void {
+  function onSubmit(data: ProfileDto): void {
     console.warn('form', data);
     navigation.navigate('Appointment' as never);
   }
+
+  useEffect(() => {
+    if (errors) {
+      for (const [key, value] of Object.entries(errors)) {
+        if (key) {
+          Toast.show({
+            type: 'error',
+            text1: key,
+            text2: value.message,
+          });
+        }
+      }
+    }
+  }, [errors]);
   return (
     <>
+      {errors && <Toast />}
       <Input name="name" control={control} icon="user" placeholder="Name" mb={8} />
       <Input
         name="email"
