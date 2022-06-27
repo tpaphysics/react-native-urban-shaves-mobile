@@ -55,6 +55,7 @@ export default function LoginForm() {
         placeholder="E-mail"
         mb={8}
       />
+
       <Input
         name="password"
         control={control}

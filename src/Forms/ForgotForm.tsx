@@ -1,24 +1,44 @@
+import { classValidatorResolver } from '@hookform/resolvers/class-validator';
 import { useNavigation } from '@react-navigation/native';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import Toast from 'react-native-toast-message';
 
 import Button from '../components/Button';
 import Input from '../components/Input';
-
-interface FormData {
-  email: string;
-}
+import { ForgotDto } from '../dto/forgot.dto';
 
 export default function ForgotForm() {
-  const { control, handleSubmit } = useForm<FormData>();
+  const resolver = classValidatorResolver(ForgotDto);
+
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ForgotDto>({ resolver });
   const navigation = useNavigation();
 
-  function onSubmit(data: FormData): void {
+  function onSubmit(data: ForgotDto): void {
     console.warn('form', data);
     navigation.navigate('Login' as never);
   }
+
+  useEffect(() => {
+    if (errors) {
+      const { email } = errors;
+      if (email) {
+        Toast.show({
+          type: 'error',
+          text1: 'Email!',
+          text2: email.message,
+        });
+      }
+    }
+  }, [errors]);
+
   return (
     <>
+      {errors.email && <Toast />}
       <Input
         name="email"
         autoCapitalize="none"
