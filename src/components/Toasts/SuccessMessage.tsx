@@ -1,16 +1,28 @@
+import { AntDesign } from '@expo/vector-icons';
 import Icon from '@expo/vector-icons/Feather';
 import React from 'react';
-import { ErrorToast } from 'react-native-toast-message';
+import { BaseToastProps, ErrorToast } from 'react-native-toast-message';
 
 import { colors } from '../../../theme';
 
-export default function Error(props: any) {
+const toast = {
+  error: {
+    bg: colors.red,
+    icon: 'exclamationcircle',
+  },
+  success: {
+    bg: colors.green,
+    icon: 'checksquare',
+  },
+};
+
+export default function SuccessMessage(props: BaseToastProps) {
   return (
     <ErrorToast
       {...props}
       renderLeadingIcon={() => (
-        <Icon
-          name="info"
+        <AntDesign
+          name="checksquare"
           size={28}
           color={colors.white}
           style={{ marginTop: 16, marginLeft: 22 }}
@@ -20,7 +32,7 @@ export default function Error(props: any) {
       {...props}
       style={{
         borderColor: colors.white,
-        backgroundColor: colors.red,
+        backgroundColor: colors.green,
       }}
       text1Style={{
         color: colors.white,

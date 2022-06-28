@@ -1,13 +1,13 @@
-import Icon from '@expo/vector-icons/Feather';
 import { classValidatorResolver } from '@hookform/resolvers/class-validator';
 import { useNavigation } from '@react-navigation/native';
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import Toast, { ErrorToast } from 'react-native-toast-message';
+import Toast from 'react-native-toast-message';
 
-import { colors } from '../../theme';
 import Button from '../components/Button';
 import Input from '../components/Input';
+import ErrorMessage from '../components/Toasts/ErrorMessage';
+import SuccessMessage from '../components/Toasts/SuccessMessage';
 import { LoginDto } from '../dto/login.dto';
 
 export default function LoginForm() {
@@ -43,38 +43,8 @@ export default function LoginForm() {
 
   return (
     <>
-      {errors && (
-        <Toast
-          config={{
-            error: (props) => (
-              <ErrorToast
-                renderLeadingIcon={() => (
-                  <Icon
-                    name="info"
-                    size={28}
-                    color={colors.white}
-                    style={{ marginTop: 16, marginLeft: 22 }}
-                  />
-                )}
-                text2NumberOfLines={2}
-                {...props}
-                style={{
-                  borderColor: colors.white,
-                  backgroundColor: colors.red,
-                }}
-                text1Style={{
-                  color: colors.white,
-                  fontSize: 14,
-                }}
-                text2Style={{
-                  color: colors.white,
-                  fontSize: 12,
-                }}
-              />
-            ),
-          }}
-        />
-      )}
+      {errors && <Toast config={{ error: (props) => <SuccessMessage {...props} /> }} />}
+
       <Input
         name="email"
         autoCapitalize="none"
