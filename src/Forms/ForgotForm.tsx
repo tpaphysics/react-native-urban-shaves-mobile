@@ -6,6 +6,7 @@ import Toast from 'react-native-toast-message';
 
 import Button from '../components/Button';
 import Input from '../components/Input';
+import ErrorMessage from '../components/Toasts/ErrorMessage';
 import { ForgotDto } from '../dto/forgot.dto';
 
 export default function ForgotForm() {
@@ -39,7 +40,8 @@ export default function ForgotForm() {
 
   return (
     <>
-      {errors.email && <Toast />}
+      {errors.email && <Toast config={{ error: (props) => <ErrorMessage {...props} /> }} />}
+
       <Input
         name="email"
         autoCapitalize="none"

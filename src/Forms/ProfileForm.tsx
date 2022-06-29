@@ -6,6 +6,7 @@ import Toast from 'react-native-toast-message';
 
 import Button from '../components/Button';
 import Input from '../components/Input';
+import ErrorMessage from '../components/Toasts/ErrorMessage';
 import { ProfileDto } from '../dto/profile.dto';
 
 export default function ProfileForm() {
@@ -37,7 +38,8 @@ export default function ProfileForm() {
   }, [errors]);
   return (
     <>
-      {errors && <Toast />}
+      {errors && <Toast config={{ error: (props) => <ErrorMessage {...props} /> }} />}
+
       <Input name="name" control={control} icon="user" placeholder="Name" mb={8} />
       <Input
         name="email"
@@ -46,7 +48,7 @@ export default function ProfileForm() {
         keyboardType="email-address"
         icon="mail"
         placeholder="Email"
-        mb={32}
+        mb={16}
       />
       <Input name="password" control={control} icon="user" placeholder="Password" mb={8} />
       <Input name="newPassword" control={control} icon="lock" placeholder="New password" mb={8} />

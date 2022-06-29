@@ -6,6 +6,7 @@ import Toast from 'react-native-toast-message';
 
 import Button from '../components/Button';
 import Input from '../components/Input';
+import ErrorMessage from '../components/Toasts/ErrorMessage';
 import { RegisterDto } from '../dto/register.dto';
 
 export default function RegisterForm() {
@@ -37,7 +38,8 @@ export default function RegisterForm() {
   }, [errors]);
   return (
     <>
-      {errors && <Toast />}
+      {errors && <Toast config={{ error: (props) => <ErrorMessage {...props} /> }} />}
+
       <Input name="name" control={control} icon="user" placeholder="Name" mb={8} />
       <Input
         name="email"

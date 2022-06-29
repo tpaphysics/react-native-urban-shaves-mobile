@@ -1,2 +1,7 @@
+/*.js
+/*.json
+**/*.js
+**/*.json
+
 node_modules
 .expo-shared

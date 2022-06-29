@@ -43,7 +43,7 @@ export default function LoginForm() {
 
   return (
     <>
-      {errors && <Toast config={{ error: (props) => <SuccessMessage {...props} /> }} />}
+      {errors && <Toast config={{ error: (props) => <ErrorMessage {...props} /> }} />}
 
       <Input
         name="email"

@@ -41,7 +41,7 @@
     "@expo/ngrok": "^4.1.0",
     "@types/": "react-navigation/native",
     "@types/react": "~17.0.21",
-    "@types/react-native": "~0.66.13",
+    "@types/react-native": "~0.67.6",
     "@types/react-native-indicators": "^0.16.2",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
