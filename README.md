@@ -1,3 +1,7 @@
+<p align="center">
+<img  src="./assets/logo-git.png"/>
+</p>
+
 <div align="center">
 <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn" />
 
@@ -12,13 +16,9 @@
 <br/>
 <br/>
 
-<p align="center">
-<img  src="./assets/logo-git.png"/>
-</p>
-
 ## **💻 Projeto**
 
-O App mobile <strong>Urban Shaves</strong> criado para agendamento de serviços de babearia está sendo desenvolvido em [React Native](https://reactnative.dev/) utilizando o [Expo](https://docs.expo.dev/). O projeto Possui também uma [versão web](https://github.com/tpaphysics/react-urban-shaves-desktop) para gerenciamento dos administradores e uma [API](https://github.com/tpaphysics/nestjs-jwt-authentication), ambos em desenvolvimento.
+O App mobile <strong>Urban Shaves</strong> criado para agendamento de serviços de babearia está sendo desenvolvido em [React Native](https://reactnative.dev/) utilizando o [Expo](https://docs.expo.dev/). O projeto possui também uma [versão web](https://github.com/tpaphysics/react-urban-shaves-web) para administração e uma [API](https://github.com/tpaphysics/nestjs-urban-shaves-api) para integração.
 
 #### **Screens**
 

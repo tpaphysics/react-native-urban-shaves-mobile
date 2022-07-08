@@ -1,3 +1,4 @@
+import { MotiView } from 'moti';
 import React from 'react';
 import { Keyboard, KeyboardAvoidingView, TouchableWithoutFeedback, View } from 'react-native';
 
@@ -10,7 +11,18 @@ import Logo from '../components/Logo';
 
 export default function Login() {
   return (
-    <View
+    <MotiView
+      from={{
+        opacity: 0,
+        scale: 0.5,
+      }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+      }}
+      transition={{
+        type: 'timing',
+      }}
       style={{
         flex: 1,
         alignItems: 'center',
@@ -29,6 +41,6 @@ export default function Login() {
           </View>
         </KeyboardAvoidingView>
       </TouchableWithoutFeedback>
-    </View>
+    </MotiView>
   );
 }
